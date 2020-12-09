@@ -52,7 +52,7 @@ add_executable (niedoida ${SRCS} ${HDRS})
 target_include_directories (niedoida PRIVATE include ../yaml_inputter/include)
 
 if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    set (NIEDOIDA_EXTRA_LIBS dl rt)
+    set (NIEDOIDA_EXTRA_LIBS backtrace dl rt)
 endif ()
 
 if (WIN32)

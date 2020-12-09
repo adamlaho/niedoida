@@ -9,12 +9,12 @@ export CMAKE_VERSION=$CMAKE_RELEASE.3
 export CMAKE=cmake-$CMAKE_VERSION
 export BOOST_VERSION=1.68.0
 export BOOST=boost_1_68_0
-export MPICH_VERSION=3.2.1
+export MPICH_VERSION=3.3.2
 export MPI=mpich-$MPICH_VERSION
 export HYDRA=hydra-$MPICH_VERSION
-export OPENBLAS_VERSION=0.3.3
+export OPENBLAS_VERSION=0.3.10
 export OPENBLAS=OpenBLAS-$OPENBLAS_VERSION
-export ARMADILLO=armadillo-9.100.5
+export ARMADILLO=armadillo-10.1.2
 export PETSC=petsc-3.10.2
 export YAML_CPP=yaml-cpp-0.6.2
 export HDF_RELEASE=1.10
@@ -179,7 +179,7 @@ rm -rf $MPI
 tar xzf $MPI.tar.gz
 cd $MPI
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    ./configure --prefix=$EP_PATH --enable-fast=all --disable-shared --enable-fortran=yes --enable-cxx=yes --enable-romio --enable-threads=multiple CFLAGS=-fPIC CXXFLAGS=-fPIC FFLAGS=-fPIC FCFLAGS=-fPIC
+    ./configure --prefix=$EP_PATH --enable-fast=all --disable-shared --enable-fortran=yes --enable-cxx=yes --enable-romio --enable-threads=multiple CFLAGS=-fPIC CXXFLAGS=-fPIC FFLAGS="-fPIC -fallow-argument-mismatch" FCFLAGS="-fPIC -fallow-argument-mismatch"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     CC=/usr/bin/cc CXX=/usr/bin/c++ ./configure --prefix=$EP_PATH --enable-fast=all --disable-shared --enable-fortran=no --enable-cxx=yes --enable-romio --enable-threads=multiple CFLAGS=-fPIC CXXFLAGS=-fPIC
 fi

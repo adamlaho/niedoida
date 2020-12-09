@@ -27,7 +27,7 @@ add_executable (core_kit_test src/core_kit_test.cpp
 add_test (NAME core_kit_test COMMAND core_kit_test)
 
 if (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    set (NIEDOIDA_EXTRA_LIBS dl rt)
+    set (NIEDOIDA_EXTRA_LIBS backtrace dl rt)
 endif ()
 
 target_link_libraries (core_kit_test
@@ -53,4 +53,5 @@ target_link_libraries (core_kit_test
     ${LA_LIBRARIES}
     ${YAML_CPP_LIBRARY}
     ${OPENSSL_LIBRARIES}
+    ${}
     ${NIEDOIDA_EXTRA_LIBS})

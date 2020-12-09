@@ -70,6 +70,7 @@ set (BOOST_ROOT "${EXTERNAL_PACKAGES_ROOT}")
 set (Boost_NO_SYSTEM_PATHS   ON)
 set (Boost_USE_STATIC_LIBS   ON)
 set (Boost_USE_MULTITHREADED ON)
+set (Boost_NO_BOOST_CMAKE ON)
 find_package(Boost REQUIRED filesystem mpi program_options thread timer system unit_test_framework regex)
 
 include_directories (BEFORE SYSTEM "${EXTERNAL_PACKAGES_ROOT}/include")
