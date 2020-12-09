@@ -5,6 +5,8 @@
 #include<el_stat_prop_kit/fragment_property_tag.hpp>
 #include<el_stat_prop_kit/tag_from_string.hpp>
 
+#include <stdexcept>
+
 namespace el_stat_prop {
 
     FragmentPropertyTag::FragmentPropertyTag(
