@@ -4,8 +4,8 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-export CMAKE_RELEASE=3.12
-export CMAKE_VERSION=$CMAKE_RELEASE.3
+export CMAKE_RELEASE=3.19
+export CMAKE_VERSION=$CMAKE_RELEASE.1
 export CMAKE=cmake-$CMAKE_VERSION
 export BOOST_VERSION=1.68.0
 export BOOST=boost_1_68_0
@@ -15,7 +15,7 @@ export HYDRA=hydra-$MPICH_VERSION
 export OPENBLAS_VERSION=0.3.10
 export OPENBLAS=OpenBLAS-$OPENBLAS_VERSION
 export ARMADILLO=armadillo-10.1.2
-export PETSC=petsc-3.10.2
+export PETSC=petsc-3.14.2
 export YAML_CPP=yaml-cpp-0.6.2
 export HDF_RELEASE=1.10
 export HDF_VERSION=$HDF_RELEASE.1
